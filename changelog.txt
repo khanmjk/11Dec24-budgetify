@@ -1,0 +1,126 @@
+# Changelog
+
+## 2024-03-19
+
+### Data Model Changes
+- Modified budget categories to be organization-specific
+- Updated Organization interface to include budgetCategories array
+- Enhanced TravelDetail interface with air travel information
+- Added new interfaces for Country, City, and Airport types
+
+### Feature Enhancements
+1. Conference Travel Management
+   - Added city selection with autocomplete using cities.json
+   - Improved date range selection with validation
+   - Added air travel cost tracking
+   - Enhanced travel details list view
+   - Added car rental cost sharing logic for multiple travelers
+
+2. Organization Dashboard
+   - Added organization selector dropdown
+   - Improved budget category utilization chart
+   - Enhanced department summary view
+   - Added interactive drill-down functionality
+   - Added stacked bar chart for budget category comparison
+
+3. Department Management
+   - Fixed "Edit Budget" functionality
+   - Restored team selection and budget editing features
+   - Added budget allocation constraints
+   - Improved budget visualization
+
+### UI/UX Improvements
+- Added loading indicators for async operations
+- Enhanced form validation and error handling
+- Improved date selection constraints
+- Added tooltips for budget information
+- Enhanced mobile responsiveness
+
+### Bug Fixes
+- Fixed department budget calculation issues
+- Resolved team budget editing modal
+- Fixed navigation issues in department view
+- Corrected budget category calculations
+- Fixed data consistency issues in store
+
+### Code Organization
+- Added LocationService for city/country handling
+- Created reusable components for location and date selection
+- Improved state management with Zustand store updates
+- Added proper TypeScript types for all components
+
+### Dependencies Added
+- cities.json: For city data
+- use-debounce: For search optimization
+
+### Test Data Updates
+- Updated sample data to reflect new data model
+- Added realistic budget allocations
+- Included sample travel details
+
+## 2024-03-20
+
+### Feature Enhancements
+1. Organization View
+   - Added interactive department drill-down functionality
+   - Enhanced budget category utilization visualization
+   - Improved department summary cards with detailed budget information
+   - Added stacked bar chart showing budget category distribution across departments
+
+2. Department View
+   - Restored interactive team management features
+   - Added budget editing capabilities for teams
+   - Enhanced budget allocation visualization
+   - Improved navigation between organizational levels
+
+### UI/UX Improvements
+- Enhanced budget category comparison chart
+- Added filtering capability for budget categories
+- Improved tooltips for budget breakdowns
+- Enhanced visual hierarchy in department cards
+
+### Bug Fixes
+- Fixed team budget editing modal functionality
+- Restored previously working interactive features
+- Corrected budget calculation and rollup issues
+- Fixed navigation between different organizational views
+
+### Data Model Updates
+- Refined organization-specific budget categories implementation
+- Updated test data to reflect current organizational structure
+- Enhanced budget tracking and calculation logic
+
+## 2024-03-21
+
+### Feature Enhancements
+1. Business Travel Management
+   - Added new BusinessTravelDetail interface for tracking non-conference travel
+   - Implemented BusinessTravelManageModal for managing travel details
+   - Added travel category support (Client Visit, Inter-Office, Training)
+   - Enhanced travel expense tracking with per-person and shared costs
+
+2. Travel Categories
+   - Added TravelCategory enum for standardized travel types
+   - Integrated travel categories into budget management system
+   - Updated test data with sample business travel entries
+
+### Data Model Updates
+- Added BusinessTravelDetail interface
+- Enhanced BudgetItem interface to include businessTravelDetails
+- Added TravelCategory enum
+- Updated test data with realistic business travel scenarios
+
+### UI Components
+- Created BusinessTravelManageModal component
+- Added BusinessTravelList component for viewing travel details
+- Enhanced EditTeamBudgetModal to support both conference and business travel
+- Improved travel expense visualization and management
+
+### Test Data Improvements
+- Added sample business travel data
+- Updated budget distributions to better reflect travel expenses
+- Enhanced organization structure for testing travel management features
+
+### Deployment
+- Successfully deployed latest version to Netlify
+- Updated repository with latest changes
